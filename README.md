@@ -55,11 +55,32 @@ mbed compile -m K64F -t GCC_ARM
 Your PC may take a few minutes to compile your code. At the end, you see the following result:
 
 	[snip]
-	todo: paste snippet here
+	+--------------------------+-------+-------+-------+
+	| Module                   | .text | .data |  .bss |
+	+--------------------------+-------+-------+-------+
+	| Fill                     |    86 |     4 |  2077 |
+	| Misc                     | 33975 |  2212 |   492 |
+	| drivers                  |   558 |     0 |    32 |
+	| features/storage         |    42 |     0 |   184 |
+	| hal                      |   450 |     0 |     8 |
+	| platform                 |  1232 |     4 |   269 |
+	| rtos                     |   135 |     4 |     4 |
+	| rtos/rtx                 |  5915 |    20 |  6870 |
+	| targets/TARGET_Freescale | 12447 |    12 |   384 |
+	| Subtotals                | 54840 |  2256 | 10320 |
+	+--------------------------+-------+-------+-------+
+	Allocated Heap: 24576 bytes
+	Allocated Stack: unknown
+	Total Static RAM memory (data + bss): 12576 bytes
+	Total RAM memory (data + bss + heap + stack): 37152 bytes
+	Total Flash memory (text + data + misc): 58136 bytes
+	
+	Image: .\BUILD\K64F\GCC_ARM\mbed-os-example-spiflash-driver.bin	
+	
 	
 ## <a name="run-the-example-binary-on-the-k64f"></a> Run the Example Binary on the K64F 
 
-Copy the binary from `<root_dir>/mbed-os-example-spiflash-driver/BUILD/K64F/GCC_ARM/main.bin` to the K64F:
+Copy the binary from `<root_dir>/mbed-os-example-spiflash-driver/BUILD/K64F/GCC_ARM/mbed-os-example-spiflash-driver.bin` to the K64F:
 
 1. Connect your mbed device to the computer over USB.
 1. Copy the binary file to the mbed device.
