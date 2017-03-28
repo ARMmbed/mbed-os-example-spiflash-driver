@@ -38,11 +38,6 @@ If the mbed-os library was not automatically added (see trace above), do the fol
 mbed new .
 ```
 
-Add the spiflash-driver repository: 
-
-```
-mbed add spiflash-driver
-```
 
 ## Build the Example
 
