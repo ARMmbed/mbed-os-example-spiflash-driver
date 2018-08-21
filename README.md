@@ -11,7 +11,7 @@ Please install [mbed CLI](https://github.com/ARMmbed/mbed-cli#installing-mbed-cl
 
 This example can be used on an mbedos platform with a SPI NOR part connected to the SPI pins (on the Arduino header, for example).
 
-This document uses the K64F as an example. Simply change the relevant options (e.g. -m K64F) to be appropriate for your target.
+This document uses the K82F as an example. Simply change the relevant options (e.g. -m K82F) to be appropriate for your target.
 
 ## Create the Example Application
 
@@ -44,7 +44,7 @@ mbed new .
 Invoke `mbed compile`, and specify the name of your platform and your favorite toolchain (`GCC_ARM`, `ARM`, `IAR`). For example, for the GCC_ARM toolchain:
 
 ```
-mbed compile -m K64F -t GCC_ARM
+mbed compile -m K82F -t GCC_ARM
 ```
 
 Your PC may take a few minutes to compile your code. At the end, you see the following result:
@@ -70,12 +70,12 @@ Your PC may take a few minutes to compile your code. At the end, you see the fol
 	Total RAM memory (data + bss + heap + stack): 37152 bytes
 	Total Flash memory (text + data + misc): 58136 bytes
 	
-	Image: .\BUILD\K64F\GCC_ARM\mbed-os-example-spiflash-driver.bin	
+	Image: .\BUILD\K82F\GCC_ARM\mbed-os-example-spiflash-driver.bin	
 	
 	
-## <a name="run-the-example-binary-on-the-k64f"></a> Run the Example Binary on the K64F 
+## <a name="run-the-example-binary-on-the-k82f"></a> Run the Example Binary on the K82F 
 
-Copy the binary from `<root_dir>/mbed-os-example-spiflash-driver/BUILD/K64F/GCC_ARM/mbed-os-example-spiflash-driver.bin` to the K64F:
+Copy the binary from `<root_dir>/mbed-os-example-spiflash-driver/BUILD/K82F/GCC_ARM/mbed-os-example-spiflash-driver.bin` to the K82F:
 
 1. Connect your mbed device to the computer over USB.
 1. Copy the binary file to the mbed device.

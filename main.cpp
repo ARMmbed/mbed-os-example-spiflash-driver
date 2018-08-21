@@ -1,5 +1,5 @@
 /* mbed Microcontroller Library
- * Copyright (c) 2016 ARM Limited
+ * Copyright (c) 2018 ARM Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,11 +18,8 @@
 #include "mbed.h"
 #include "SPIFBlockDevice.h"
 
-/* This configuration of the SPI Flash Driver pins is for
- * the the SPI pins on the Arduino header to the SPI NOR part.
- */
-SPIFBlockDevice spif(D11, D12, D13, D10);
-
+// Configuring SPI Pins for SPIF Block Device pins
+SPIFBlockDevice spif(MBED_CONF_SPIF_SPI_MOSI, MBED_CONF_SPIF_SPI_MISO, MBED_CONF_SPIF_SPI_CLK, MBED_CONF_SPIF_SPI_CS);
 
 int main() {
     printf("spif test\n");
