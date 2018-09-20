@@ -19,9 +19,14 @@
 #include "SPIFBlockDevice.h"
 
 /* This configuration of the SPI Flash Driver pins is for
- * the the SPI pins on the Arduino header to the SPI NOR part.
+ * the SPI pins on the Arduino header to the SPI NOR part.
  */
-SPIFBlockDevice spif(D11, D12, D13, D10);
+
+SPIFBlockDevice spif(
+        MBED_CONF_SPIF_DRIVER_SPI_MOSI,
+        MBED_CONF_SPIF_DRIVER_SPI_MISO,
+        MBED_CONF_SPIF_DRIVER_SPI_CLK,
+        MBED_CONF_SPIF_DRIVER_SPI_CS);
 
 
 int main() {
